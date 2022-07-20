@@ -1,5 +1,5 @@
 #!/bin/sh
-'''exec' "/Users/techi.s./Documents/Web Development/TwitterClone/venv/bin/python3.9" "$0" "$@"
+'''exec' "/Users/techi.s./Documents/Web Development/TwitterClone/venv/bin/python" "$0" "$@"
 ' '''
 # -*- coding: utf-8 -*-
 import re
