@@ -15,6 +15,7 @@ import cloudinary
 import cloudinary.uploader
 import cloudinary.api
 import os
+import dj_database_url
 import django_heroku
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-j1a9&m$10_+nz&$^hsp+2r601@htqng7z_1p-y*vkbszl&vq@6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
@@ -35,6 +36,8 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
+     'whitenoise.runserver_nostatic',
+    'django.contrib.staticfiles',
     'posts',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -131,6 +134,7 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
+WHITENOISE_USE_FINDERS = True
 
 
 # Static files (CSS, JavaScript, Images)
@@ -147,9 +151,11 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
 cloudinary.config(
     cloud_name="dcb7s1d02",
     api_key="674842767227648",
     api_secret="g1bx8SbWPy7J0iMPm19G-861sEM",
 )
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
