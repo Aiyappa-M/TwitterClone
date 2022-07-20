@@ -1,2 +1,3 @@
-release:python3 manage.py migrate
-web: gunicorn TwitterClone.wsgi --log-file--
+web: gunicorn TwitterClone.wsgi:application --log-file - --log-level debug
+python3 manage.py collectstatic --noinput
+manage.py migrate
