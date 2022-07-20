@@ -1,3 +1,3 @@
-web: gunicorn TwitterClone.wsgi --log-file=-
-python3 manage.py collectstatic --noinput
+web: gunicorn TwitterClone.wsgi:application --log-file - --log-level debug
+python3manage.py collectstatic --noinput
 manage.py migrate
