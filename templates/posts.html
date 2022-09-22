@@ -9,16 +9,14 @@
         <form action="" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
 
-            <input type="text" name="name" placeholder="Your Name" />
+            <input type="text" name="name" placeholder="Name" />
             <textarea name="body" placeholder="What's Happening?"></textarea>
             <div class="tweet">
-                <input style="background-color: white;" type="file" name="image" />
                 <button type="submit" value="Tweet">Tweet</button>
-
             </div>
-            <!-- <div class="my-icon">
+            <div class="my-icon">
                 <input type="file" name="image" />
-            </div> -->
+            </div>
         </form>
     </section>
 
@@ -28,9 +26,8 @@
             <li>
                 <img class="menu_icon js-menu-icon" src="{% static 'img/option.png' %}" />
                 <div class="menu">
-                    <a href="/edit/{{ post.id }}">Edit</a><br><br>
-                    <a href="/delete/{{post.id}}/">Delete</a>
-
+                    <a href="/delete/{{post.id}}/">Delete</a></br>
+                    <a href="/edit/{{ post.id }}">Edit</a>
                 </div>
                 <div class="logo">
                     <img src="{% static 'img/man.png' %}" />

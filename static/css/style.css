@@ -11,18 +11,15 @@ body {
     border-right: 1px solid #ccc;
 }
 
+
+/* 
+post
+***/
+
 .post_form {
     padding: 20px 40px;
     border-bottom: 1px solid #ccc;
     height: fit-content;
-}
-
-.post_form .tweet button {
-    background: #1da1f2;
-    border-radius: 6px;
-    font-size: 14px;
-    font-weight: bold;
-    padding: 10px 15px 10px 15px;
 }
 
 .post_form input {
@@ -30,7 +27,7 @@ body {
     margin-bottom: 10px;
     padding: 10px;
     border: 1px none #ccc;
-    background-color: #e6fef7;
+    background-color: #b3ebda;
     border-radius: 8px;
 }
 
@@ -113,9 +110,14 @@ body {
 }
 
 button {
-    border: none;
-    background-color: white;
-    color: none;
+    padding: 14px 29px;
+    color: white;
+    background-color: dodgerblue;
+    border-radius: 10px;
+    float: right;
+    margin-top: 5px;
+    margin-inline-end: -28px;
+    margin-right: 17px;
 }
 
 .my-icon input {
@@ -145,16 +147,12 @@ button {
 a.cancel-button {
     width: 70%;
     margin-bottom: 10px;
-    padding: 8px;
+    padding: 10px;
     border: 1px none #ccc;
-    background-color: #1da1f2;
-    background: #1da1f2;
-    border-radius: 15px;
-    font-size: 18px;
-    padding: 10px 15px 10px 15px;
+    background-color: dodgerblue;
+    border-radius: 8px;
     text-decoration: none;
-    font-family: system-ui;
-    color: black;
+    color: white;
 }
 
 .post-border {
@@ -169,16 +167,16 @@ a.cancel-button {
     height: fit-content;
 }
 
-.users_name {
+.inputt {
     width: 70%;
     margin-bottom: 10px;
     padding: 10px;
     border: 1px none #ccc;
-    background-color: #e6fef7;
+    background-color: #b3ebda;
     border-radius: 8px;
 }
 
-.user_text {
+.texxtarea {
     width: 70%;
     padding: 10px;
     border: 1px none #ccc;
@@ -186,15 +184,14 @@ a.cancel-button {
 }
 
 .update-button {
-    width: 19%;
+    width: 28%;
     margin-bottom: 10px;
+    padding: 10px;
     border: 1px none #ccc;
+    background-color: dodgerblue;
+    border-radius: 8px;
     cursor: pointer;
-    background-color: #1da1f2;
-    background: #1da1f2;
-    border-radius: 15px;
-    font-size: 18px;
-    padding: 10px 15px 10px 15px;
+    color: white;
 }
 
 .inputimage {
@@ -205,20 +202,21 @@ a.cancel-button {
     margin-top: 10px;
 }
 
+.like-button {
+    float: none;
+    float: none;
+    background-color: white;
+    color: red;
+    font-size: xx-large;
+    border: none;
+    width: 3px;
+}
+
 .likes-count {
     padding-right: 10px;
+    padding-top: 32px;
 }
 
 .row {
     display: flex;
-}
-
-.post-border {
-    width: 60%;
-    height: 33vh;
-    border-radius: 20px;
-    margin-top: 10px;
-    align-content: center;
-    margin-bottom: 10px;
-    margin-left: 10px;
 }

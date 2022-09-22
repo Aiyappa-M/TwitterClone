@@ -7,8 +7,8 @@
     <section class="post_formm">
         <form action="/edit/{{post.id}}/" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
-            <input class="users_name" type="text" name="name" placeholder="Name" value="{{post.name}}" required />
-            <input row="3" class="user_text" type="text" name="body" value="{{post.body}}"></textarea>
+            <input class="inputt" type="text" name="name" placeholder="Name" value="{{post.name}}" required />
+            <input row="3" class="texxtarea" type="text" name="body" value="{{post.body}}"></textarea>
             <label for="{{post.name}}"></label> {% if post.image.url %}
             <img class="post-border" src="{{ post.image.url }}" /> {% endif %}
             <div class="flex">
